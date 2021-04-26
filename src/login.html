@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Community Center: Services</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="community.css" rel="stylesheet">
+<script>
+	var username = "";
+	function EvaluateLogin()
+	{
+		username = document.getElementById('username').value;
+		if( document.getElementById('username').value == 'mark123' ){
+			document.loginForm.action = "management.html";
+		}
+		else{
+			document.loginForm.action = "index.html";
+		}
+		var welcomephrase = "Welcome to our Community Center, " + username; 
+		alert(welcomephrase);
+		document.forms["loginForm"].submit();
+		return false;
+	}
+</script>
+</head>
+<body>
+<div id="wrapper">
+<header>
+	<h1><a href="index.html">Community Center</a></h1>
+	<div id="menu-outer">
+		<div class="table">
+		  <ul id="horizontal-list">
+			<li><a href="index.html"><button class="mbtn std">HOME</button></a></li>
+			<li><a href="services.html"><button class="mbtn std">SERVICES</button></a></li>
+			<li><a href="donate.html"><button class="mbtn std">DONATE</button></a></li>
+			<li><a href="volunteer.html"><button class="mbtn std">VOLUNTEER</button></a></li>
+			<li><a href="login.html"><button class="mbtn std">LOGIN</button></a></li>
+			<li><a href="login.html"><button class="mbtn std">EMPLOYEE</button></a></li>
+		  </ul>
+		</div>
+	  </div>
+</header>
+<main>
+<div id="login">
+	<h3>Login</h3>
+	<form name="loginForm" method="GET" action="">
+		<label for="username">Username:</label>
+	
+		<label for="password">Password:</label>
+		<input type="password" name="password" id="password" required>
+		<input type="button" value="Submit" onClick="return EvaluateLogin();" />
+	</form>
+	<h3>Don't have an Account?</h3>
+	<form method="get" action="accountregistration.html">
+		<button type="submit">Register Now!</button>
+	</form>
+</div>
+</main>
+</div>
+</body>
+</html>

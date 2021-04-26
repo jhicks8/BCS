@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Community Center: Services</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="community.css" rel="stylesheet">
+<script>
+	function rand(){
+		document.getElementById("randomNum").innerHTML = Math.floor(Math.random()*16777215).toString(16);
+	}
+</script>
+</head>
+<body onload="rand()">
+<div id="wrapper">
+<header>
+	<h1><a href="index.html">Community Center</a></h1>
+</header>
+<nav>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="services.html">Services</a></li>
+		<li><a href="donate.html">Donate</a></li>
+		<li><a href="volunteer.html">Volunteer</a></li>
+		<li><a href="login.html">Login</a></li>
+	</ul>
+</nav>
+<div id="classroom1"></div>
+<main>
+	<h2>Thank you for registering.</h2>
+	<p>Please use the following code receipt code as proof of purchase:</p>
+	<div id="randomNum"></div>
+</main>
+<footer>
+	Copyright &copy; 2021 Community Center<br>
+</footer>
+</div>
+</body>
+</html>
