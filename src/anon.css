@@ -1,133 +1,109 @@
-.theme-blue {
-    color: #427bb8;
+body {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px 0;
+  background-image: url("images/donate.jpeg"); 
+  background-repeat: no-repeat;
+  object-fit: cover; 
+}
+
+button.mbtn {
+	padding:0.6em 2em;
+	border-radius: 8px;
+	color:#ffff;
+	background-color:#000000;
+	font-size:.70em;
+	border:0;
+	cursor:pointer;
+	margin:1em;
   }
-  .theme-orange {
-    color: #cc851c;
-  }
-  .theme-green {
-   color: #8ab042;
-  }
-  .theme-grey {
-    color: #666666;
-  }
-  .theme-white {
-    color: #fff;
-  }
-  .theme-background-blue {
-    background-color: #427bb8;
-    color: #fff;
-  }
-  .theme-background-orange {
-    background-color: #cc851c;
-    color: #fff;
-  }
-  .theme-background-green {
-    background-color: #8ab042;
-    color: #fff;
-  }
-  .theme-background-grey {
-    background-color: #666666;
-    color: #fff;
-  }
-  .theme-background-white {
-    background-color: #fff;
-    color: #4c4c4c;
-  }
-  .donate-bar {
-    padding: 32px 23px 28px;
-  }
-  .donate-bar > div:first-child {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
-    border-right: 1px dotted #2a4f76;
-    margin-top: 19px;
-    font-size: 25px;
-    padding: 0;
-  }
-  .donate-buttons>li>a {
-    font-size: 17px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
-    position: relative;
-    display: block;
-    padding: 10px 3px;
-    border-radius: 5px;
-  }
-  .btn-blue-other,
-  .btn-blue {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
-    background-color: #427bb8;
-    color: #fff;
-    border-radius: 5px;
-    border: 0;
-    padding: 0;
-    width: 75px;
-    height: 37px;
-    margin-top: 8px;
-  }
-  .btn-green {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: bold;
-    background-color: #8ab042;
-    color: #fff;
-    border-radius: 5px;
-    border: 0;
-    padding: 0;
-    width: 114px;
-    height: 37px;
-    margin-top: 8px;
-  }
-  #other-input {
-    display: none;
-  }
-  #other-input input {
-    position: relative;
-    font-weight: bold;
-    background-color: #fff;
-    color: #427bb8;
-    border-radius: 5px;
-    border: 0;
-    border: 5px solid #427bb8;
-    padding: 0 0 3px 15px;
-    width: 75px;
-    height: 37px;
-    margin: 18px 3px 0;
-  }
-  input[type=number]::-webkit-inner-spin-button, 
-  input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-   margin: 0; 
-  }
-  #other-input span {
-    font-family: inherit;
-    font-weight:bold;
-    color: #427bb8;
-    position: absolute;
-    padding: 23px 12px;
-    z-index: 10;
-    pointer-events: none;
-  }
-  .impact {
-    font-size: 1.1em;
-    font-weight: bold;
-    clear: both;
-  }
-  .nav>li>a:hover, .nav>li>a:focus {
-    text-decoration: none;
-    background-color: transparent;
-  }
-  .donate-buttons .active {
-    background-color: #fff;
-    border: 5px solid #427bb8;
-    color: #427bb8;
-  }
-  .donate-buttons:focus {
-  outline: -webkit-focus-ring-color auto 0px;
-  }
-  .donate-buttons li:last-child {
-    font-size: 17px;
-    line-height: 37px;
-    padding-left: 20px;
-    padding-top: 15px;
-  }
+
+button.mbtn.std {
+	background-color:#174ec4;
+}
+
+ul#horizontal-list {
+	min-width:696px;
+	list-style: none; 
+	padding-top: 20px;
+}
+
+ul#horizontal-list li { 
+	display: inline;
+}
+
+#background{
+  background-color: white;
+}
+
+.payment-amount-buttons {
+  clear: both;
+  overflow: hidden;
+}
+
+.payment-amount-buttons .button-container {
+  box-sizing: border-box;
+  float: left;
+  padding: 2px;
+  width: 33.33%;
+}
+
+.payment-amount-buttons .button-container .button {
+  width: 100%;
+}
+
+.payment-amount-buttons .button-container .button.active,
+.payment-amount-buttons .button-container .button.active:hover,
+.payment-amount-buttons .button-container .button.active:focus {
+  background-color: red;
+  border-color: black;
+  color: white;
+  cursor: default;
+}
+
+.form-wrapper .field-list .fields.address .field.address1 {
+  width: 70%;
+}
+
+.form-wrapper .field-list .fields.address .field.address2 {
+  width: 26%;
+}
+
+.honor-type {
+  padding-top: 8px;
+}
+
+.field.city {
+  clear: both;
+}
+
+.field.cc-number {
+  width: 98%;
+}
+
+.field.cc-exp-month,
+.field.cc-exp-year {
+  max-width: 120px;
+  width: 98%;
+}
+
+.field.cc-cvc {
+  max-width: 80px;
+  width: 98%;
+}
+
+.button.btn-working[disabled] {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.btn-state-working,
+.button.btn-working .btn-state-normal {
+  display: none;
+  visibility: hidden;
+}
+
+.button.btn-working[disabled] .btn-state-working {
+  display: inline;
+  visibility: visible;
+}

@@ -9,6 +9,7 @@
 <script>
     function registerOnLocation(s, f){
         var currentSelection = s;
+        //currentSelection = document.getElementById('').;
         if(f <= 0){
             var confirmationText = "Are you sure you'd like to register for the On-Location Service: " + currentSelection
             + ". This is a free service so there is no additional charge.";
@@ -54,31 +55,34 @@
 	<ul id="onlocationservices">
         <li class="FreeService">
             <div id="Spanish Lessons">
-                <h3>Lawn Care</h3>
-                <p>We will send out our volunteers to take care of your pesky lawn care needs. </p>
-                <p>Hours: 6:00am - 7:00pm</p>
-                <p>Days: Saturdays</p>
+                <h3>Spanish Lessons</h3>
+                <p>Learn Spanish in this 10 week course taught by Mrs.Rodriguez</p>
+                <p>Hours: 6:00PM - 7:00PM</p>
+                <p>Days: Wednesdays</p>
                 <p>Fees: None apply</p>
                 <form action="freeregistration.html">
-                    <input type="button" value="Register" onClick="return registerOnLocation('Lawn Care', 0);" />
+                    <input type="button" value="Register" onClick="return registerOnLocation('Spanish Lessons', 0);" />
                 </form>
             </div>
             
         </li>
         <li class="PaidService">
-            <div class="ElderlyCare">
-                <h3>At Home Elderly Care</h3>
-                <p>Our volunteers will assist you with any elderly care needs you may have.</p>
+            <div class="pottery">
+                <h3>HTML Coding Lessons</h3>
+                <p>Learn to code 1990's style HTML pages with Mr. Hicks! </p>
                 <p>Hours: 12:00PM - 1:00PM</p>
                 <p>Days: Saturday</p>
-                <p>Fees: $45.00 Registration Fee</p>
+                <p>Fees: $0.00 Registration Fee</p>
                 <form action="freeregistration.html">
-                    <input type="button" value="Register" onClick="return registerOnLocation('Elderly Care', 45);" />
+                    <input type="button" value="Register" onClick="return registerOnLocation('Pottery', 45);" />
                 </form>
             </div>
         </li>
     </ul>
 </main>
+<footer>
+	Copyright &copy; 2021 Community Center<br>
+</footer>
 </div>
 </body>
 </html>

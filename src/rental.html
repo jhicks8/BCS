@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Community Center: Services</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="community.css" rel="stylesheet">
+</head>
+<script>
+    function registerOnLocation(s, f){
+        var currentSelection = s;
+        if(f <= 0){
+            var confirmationText = "You would like to Continue registering for Service: " + currentSelection
+            + ". With no additional charge.";
+            if (confirm(confirmationText)) {
+                alert("Thank you for registering for: " + currentSelection);
+            } else {
+                alert("Feel free to check out some other services.");
+            }
+        } else{
+            var confirmationText = "You would like to Continue registering for Service: " + currentSelection
+            + ". with a charge of $" + f ;
+            if (confirm(confirmationText)) {
+                alert("Thank you for registering for " + currentSelection + " Continuing to payment.");
+                window.location.href = "payment.html";
+            } else {
+                alert("feel free to check out some other services.");
+            }
+        }
+    }
+</script>
+<body class>
+<div id="wrapper">
+    <header>
+        <h1><a href="index.html">Best Community Services</a></h1>
+        <div id="menu-outer">
+          <div class="table">
+            <ul id="horizontal-list">
+            <li><a href="index.html"><button class="mbtn std">HOME</button></a></li>
+            <li><a href="services.html"><button class="mbtn std">SERVICES</button></a></li>
+            <li><a href="donate.html"><button class="mbtn std">DONATE</button></a></li>
+            <li><a href="volunteer.html"><button class="mbtn std">VOLUNTEER</button></a></li>
+            <li><a href="login.html"><button class="mbtn std">LOGIN</button></a></li>
+            <li><a href="emplogin.html"><button class="mbtn std">EMPLOYEE</button></a></li>
+            </ul>
+          </div>
+          </div>
+      </header>
+
+<main>
+	<h2>Rental Equipment</h2>
+	<ul id="rentals">
+        <li class="PaidService">
+            <div id=" Weddings ">
+                <h3> Power Tools </h3>
+                <p2> 24 hours </p2><br>
+                <p2>Fees: $100</p2>
+                <form action="freeregistration.html">
+                    <input type="button" value="Rent" onClick="return registerOnLocation('Powertools:Tools', 100);" />
+                </form>
+            </div>
+            
+        </li>
+        <li class="PaidService">
+            <div class="Funrals">
+                <h3>Tables and Chairs</h3>
+                <p3>48 hours </p3><br>
+                <p2>Fees: $75</p2>
+                <form action="freeregistration.html">
+                    <input type="button" value="Rent" onClick="return registerOnLocation('Party Equipment:Tables and Chairs', 75);" />
+                </form>
+            </div>
+        </li>
+    </ul>
+</main>
+</div>
+</body>
+</html>

@@ -4,109 +4,101 @@
 <title>Community Center: Services</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="anon.css" rel="stylesheet">
-<script src="dono.js"></script>
+<link href="community.css" rel="stylesheet">
+<script>
+	
+	function EvaluateLogin()
+	{
+       
+		document.DonateForm.action = "Thank.html";
+	
+		var welcomephrase = "Thank you for the donation! Every little bit helps."; 
+		alert(welcomephrase);
+		document.forms["DonateForm"].submit();
+		return false;
+	}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <h1><a href="index.html">Best Community Services</a></h1>
+    <div id="menu-outer">
+      <div class="table">
+        <ul id="horizontal-list">
+        <li><a href="index.html"><button class="mbtn std">HOME</button></a></li>
+        <li><a href="services.html"><button class="mbtn std">SERVICES</button></a></li>
+        <li><a href="donate.html"><button class="mbtn std">DONATE</button></a></li>
+        <li><a href="volunteer.html"><button class="mbtn std">VOLUNTEER</button></a></li>
+        <li><a href="login.html"><button class="mbtn std">LOGIN</button></a></li>
+        <li><a href="emplogin.html"><button class="mbtn std">EMPLOYEE</button></a></li>
+        </ul>
+      </div>
+      </div>
+  </header>
 
-<div class="container theme-background-white main-body">
-    <div class="col-md-12">
-      <div class="row donate-bar">  
-        <div class="col-md-4 theme-blue">
-          GIVE WHERE NEEDED MOST
-        </div>
-        <div class="col-md-8">
-          <ul class="nav navbar-nav navbar-left donate-buttons" id="donate-buttons">
-            <li><a href="#">
-              <button class="btn-blue active" data-dollars='25' data-impact="Covers housing or counseling services for one person">
-                $25
-              </button>
-            </a></li>
-            <li><a href="#">
-              <button class="btn-blue" data-dollars='50' data-impact="Covers housing or counseling services for two people">
-                $50
-              </button>
-            </a></li>
-            <li><a href="#">
-              <button class="btn-blue" data-dollars='100' data-impact="Covers housing or counseling services for four people">
-                $100
-              </button>
-            </a></li>
-            <li><a href="#">
-              <button class="btn-blue" data-dollars='500' data-impact="Covers housing or counseling services for twenty people">
-                $500
-              </button>
-            </a></li>
-            <li id="other"><a href="#">
-              <button class="btn-blue-other" data-dollars='other' data-impact="Thank you!">
-                OTHER
-              </button>
-            </a></li>
-            <li id="other-input">
-              <span>$</span>
-             <input data-impact="That’s great. Thank you!">
-            </li>
-            <li><a href="#">
-              <button class="btn-green" data-toggle="modal" data-target="#myModal">
-                DONATE
-              </button>
-            </a></li>
-            <li style="display: none;"><a href="#">
-              LEARN MORE<i class="fa fa-chevron-right margin-left"></i>
-            </a></li>
-          </ul>
-          <p class="impact">
-            Covers housing or counseling services for one person
-          </p>
-          <!-- Modal -->
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header well text-center theme-background-blue">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h2>You’re Donating:</h2>
-                  <h1 style="font-size: 5.5em; margin-top: 0;">$<span id="price"></span></h1>
-                  <em>Thank you!</em>
-                </div>
-                <div class="modal-body">
-                  <div class="row">  
-                    <section class="col-md-12">
-                      <form>
-                        <fieldset class="col-md-6">
-                          <legend>
-                            Your personal info
-                          </legend>
-                          <label>Your Name</label>
-                          <input type="string" class="form-control">
-                          <label>Your email</label>
-                          <input type="email" class="form-control">
-                          <label>Address</label>
-                          <input type="email" class="form-control">
-                          <label>City, State, Zip Code</label>
-                          <input type="email" class="form-control">
-                        </fieldset>
-                        <fieldset class="col-md-6">
-                          <legend>
-                            Credit Card Information
-                          </legend>
-                          <label for="card-number">Credit Card Number</label>
-                          <input placeholder="1234 5678 9012 3456" pattern="[0-9]*" type="text" class="form-control card-number" id="card-number">
-                          <label for="card-number">Expiration Date</label>
-                          <input placeholder="MM/YY" pattern="[0-9]*" type="text" class="form-control card-expiration" id="card-expiration">
-                          <label for="card-number">CVV Number</label>
-                          <input placeholder="CVV" pattern="[0-9]*" type="text" class="form-control card-cvv" id="card-cvv">
-                          <label for="card-number">Billing Zip Code</label>
-                          <input placeholder="ZIP" pattern="[0-9]*" type="text" class="form-control card-zip" id="card-zip">
-                        </fieldset>
-                      </form>
-                    </section>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
-                  <button type="button" class="btn-green">CONTINUE</button>
-                </div>
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal -->
-        </div>
-      </div><!--/.donate-bar-->
-    </div><!-- /.col-md-12 -->
+<main>
+<div id="nameD">
+	<h3>Donate</h3>
+	<form name="DonateForm" method="GET" action="Thank.html">
+        <label for="amount">Amount:</label>
+		<input type="amount" name="amount" id="amount" required>
+		<div class="row">
+			<div class="col-75">
+			  <div class="container">
+				  <div class="row">
+					<div class="col-50">
+					  <h3>Payment</h3>
+					  <label for="cname">Name on Card</label>
+					  <input type="text" id="cname" name="cardname">
+					  <label for="ccnum">Credit card number</label>
+					  <input type="text" id="ccnum" name="cardnumber">
+					  <label for="expmonth">Exp Month</label>
+					  <input type="text" id="expmonth" name="expmonth">
+		  
+					  <div class="row">
+						<div class="col-50">
+						  <label for="expyear">Exp Year</label>
+						  <input type="text" id="expyear" name="expyear">
+						</div>
+						<div class="col-50">
+						  <label for="cvv">CVV</label>
+						  <input type="text" id="cvv" name="cvv">
+						</div>
+					  </div>
+					</div>
+		  
+				  </div>
+					<div class="col-50">
+					  <h3>Billing Address</h3>
+					  <label for="fname"><i class="fa fa-user"></i> First Name</label>
+					  <input type="text" id="fname" name="firstname">
+					  <label for="lname"><i class="fa fa-user"></i> Last Name</label>
+					  <input type="text" id="lname" name="lastname">
+					  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+					  <input type="text" id="email" name="email">
+					  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+					  <input type="text" id="adr" name="address">
+					  <label for="city"><i class="fa fa-institution"></i> City</label>
+					  <input type="text" id="city" name="city">
+		  
+					  <div class="row">
+						<div class="col-50">
+						  <label for="state">State</label>
+						  <input type="text" id="state" name="state">
+						</div>
+						<div class="col-50">
+						  <label for="zip">Zip</label>
+						  <input type="text" id="zip" name="zip">
+						</div>
+					  </div>
+					</div>
+					<input type="button" value="Donate" onClick="return EvaluateLogin();" />
+			  </div>
+			</div>
+		  </div>
+</div>
+</main>
+</div>
+</body>
+</html>

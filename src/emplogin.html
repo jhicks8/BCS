@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Community Center: Services</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="login.css" rel="stylesheet">
+<script>
+	var username = "";
+	function EvaluateLogin()
+	{
+		username = document.getElementsByName('username').value;
+		if( document.getElementById('username').value == 'mark123' ){
+			document.loginForm.action = "management.html";
+		}
+		else{
+			document.loginForm.action = "index.html";
+		}
+		var welcomephrase = "Welcome to our Community Center, " + username; 
+		alert(welcomephrase);
+		document.forms["loginForm"].submit();
+		return false;
+	}
+</script>
+</head>
+<body>
+<div id="wrapper">
+<header>
+	<div id="menu-outer">
+		<div class="table">
+		  <ul id="horizontal-list">
+			<li><a href="index.html"><button class="mbtn std">HOME</button></a></li>
+			<li><a href="services.html"><button class="mbtn std">SERVICES</button></a></li>
+			<li><a href="donate.html"><button class="mbtn std">DONATE</button></a></li>
+			<li><a href="volunteer.html"><button class="mbtn std">VOLUNTEER</button></a></li>
+			<li><a href="login.html"><button class="mbtn std">LOGIN</button></a></li>
+			<li><a href="emplogin.html"><button class="mbtn std">EMPLOYEE</button></a></li>
+		  </ul>
+		</div>
+	  </div>
+</header>
+<div class="login">
+	<div class="login-triangle"></div>
+	
+	<h2 class="login-header">Employee Log in</h2>
+  
+	<form class="login-container">
+	  <p><input type="email" placeholder="Email"></p>
+	  <p><input type="password" placeholder="Password"></p>
+	  <p><input type="submit" value="Log in"></p>
+	</form>
+  </div>
+</div>
+</body>
+</html>
