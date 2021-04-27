@@ -11,18 +11,20 @@
 
         function EvaluateNewService() {
             username = document.getElementById('Date').value;
-
-            if (document.getElementById('Date').value == 'April 26') {
-                document.removeServiceForm.action = "confirmDelete.html";
-                var welcomephrase = "Deleted !";
+            if (document.getElementById('Date').value == 'June 20') {
+                document.addServiceForm.action = "addcon.html";
+                var welcomephrase = "Added !";
+                alert(welcomephrase);
+            } else if (document.getElementById('Date').value == 'April 26') {
+                document.addServiceForm.action = "addcon2.html";
+                var welcomephrase = "Added !";
                 alert(welcomephrase);
             } else {
-                document.removeServiceForm.action = "InvalidInput.html";
-                var welcomephrase = "Something went wrong ..!";
+                document.addServiceForm.action = "InvalidInput.html";
+                var welcomephrase = "Error Happend  !";
                 alert(welcomephrase);
             }
-
-            document.forms["removeServiceForm"].submit();
+            document.forms["addServiceForm"].submit();
             return false;
         }
     </script>
@@ -50,13 +52,11 @@
         <main>
 
             <div>
-
-                <h3>Delete Service</h3>
+                <h3>New Service</h3>
 
             </div>
             <div id="register">
-                <form name="removeServiceForm" method="GET" action="">
-
+                <form name="addServiceForm" method="GET" action="">
 
                     <label for="Service Name">Service Name:</label>
                     <input type="text" name="name" id="name" required>
@@ -66,7 +66,7 @@
                     <input type="time" name="time" id="time" required>
                     <label for="fees">Fees:</label>
                     <input type="text" name="Fees" id="fees" required>
-                    <input type="button" value="Delete" onClick="return EvaluateNewService();" />
+                    <input type="button" value="Add" onClick="return EvaluateNewService();" />
                 </form>
 
             </div>
@@ -74,4 +74,4 @@
     </div>
 </body>
 
-</html>v
+</html>

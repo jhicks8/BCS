@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Community Center: Services</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="community.css" rel="stylesheet">
+    <title>Community Center: Services</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="community.css" rel="stylesheet">
 </head>
 <script>
-    function registerOnLocation(s, f){
+    function registerOnLocation(s, f) {
         var currentSelection = s;
         //currentSelection = document.getElementById('').;
-        if(f <= 0){
-            var confirmationText = "Are you sure you'd like to register for the On-Location Service: " + currentSelection
-            + ". This is a free service so there is no additional charge.";
+        if (f <= 0) {
+            var confirmationText = "Are you sure you'd like to register for the On-Location Service: " + currentSelection +
+                ". This is a free service so there is no additional charge.";
             if (confirm(confirmationText)) {
                 alert("Thank you for registering for: " + currentSelection);
             } else {
                 alert("No worries, feel free to check out some other of our wonderful services.");
             }
-        } else{
-            var confirmationText = "Are you sure you'd like to register for the On-Location Service: " + currentSelection
-            + ". There is a charge of $" + f + ". Continue to checkout? ";
+        } else {
+            var confirmationText = "Are you sure you'd like to register for the On-Location Service: " + currentSelection +
+                ". There is a charge of $" + f + ". Continue to checkout? ";
             if (confirm(confirmationText)) {
                 alert("Thank you for selecting: " + currentSelection + " Continuing the checkout.");
                 window.location.href = "payment.html";
@@ -32,57 +33,58 @@
 </script>
 
 <header>
-	<h1><a href="index.html">Best Community Services</a></h1>
-	<div id="menu-outer">
-		<div class="table">
-		  <ul id="horizontal-list">
-			<li><a href="index.html"><button class="mbtn std">HOME</button></a></li>
-			<li><a href="services.html"><button class="mbtn std">SERVICES</button></a></li>
-			<li><a href="donate.html"><button class="mbtn std">DONATE</button></a></li>
-			<li><a href="volunteer.html"><button class="mbtn std">VOLUNTEER</button></a></li>
-			<li><a href="login.html"><button class="mbtn std">LOGIN</button></a></li>
-			<li><a href="emplogin.html"><button class="mbtn std">EMPLOYEE</button></a></li>
-		  </ul>
-		</div>
-	  </div>
+    <h1><a href="index.html">Best Community Services</a></h1>
+    <div id="menu-outer">
+        <div class="table">
+            <ul id="horizontal-list">
+                <li><a href="index.html"><button class="mbtn std">HOME</button></a></li>
+                <li><a href="services.html"><button class="mbtn std">SERVICES</button></a></li>
+                <li><a href="donate.html"><button class="mbtn std">DONATE</button></a></li>
+                <li><a href="volunteer.html"><button class="mbtn std">VOLUNTEER</button></a></li>
+                <li><a href="login.html"><button class="mbtn std">LOGIN</button></a></li>
+                <li><a href="emplogin.html"><button class="mbtn std">EMPLOYEE</button></a></li>
+            </ul>
+        </div>
+    </div>
 </header>
 
 <body class>
-<div id="wrapper">
+    <div id="wrapper">
 
-<main>
-	<h2>On Location Services</h2>
-	<ul id="onlocationservices">
-        <li class="FreeService">
-            <div id="Spanish Lessons">
-                <h3>Spanish Lessons</h3>
-                <p>Learn Spanish today! </p>
-                <p>Hours: 6:00PM - 7:00PM</p>
-                <p>Days: Wednesdays</p>
-                <p>Fees: None apply</p>
-                <form action="freeregistration.html">
-                    <input type="button" value="Register" onClick="return registerOnLocation('Spanish Lessons', 0);" />
-                </form>
-            </div>
-            
-        </li>
-        <li class="PaidService">
-            <div class="pottery">
-                <h3>HTML Coding Lessons</h3>
-                <p>Learn to code 1990's style HTML pages with Mr. Hicks! </p>
-                <p>Hours: 12:00PM - 1:00PM</p>
-                <p>Days: Saturday</p>
-                <p>Fees: $10.00 Registration Fee</p>
-                <form action="freeregistration.html">
-                    <input type="button" value="Register" onClick="return registerOnLocation('Pottery', 45);" />
-                </form>
-            </div>
-        </li>
-    </ul>
-</main>
-<footer>
-	Copyright &copy; 2021 Community Center<br>
-</footer>
-</div>
+        <main>
+            <h2>Services Offered at our Center</h2>
+            <ul id="onlocationservices">
+                <li class="FreeService">
+                    <div id="Spanish Lessons">
+                        <h3>Spanish Lessons</h3>
+                        <p>Learn Spanish today! </p>
+                        <p>Hours: 6:00PM - 7:00PM</p>
+                        <p>Days: Wednesdays</p>
+                        <p>Fees: None apply</p>
+                        <form action="freeregistration.html">
+                            <input type="button" value="Register" onClick="return registerOnLocation('Spanish Lessons', 0);" />
+                        </form>
+                    </div>
+
+                </li>
+                <li class="PaidService">
+                    <div class="pottery">
+                        <h3>HTML Coding Lessons</h3>
+                        <p>Learn to code 1990's style HTML pages with Mr. Hicks! </p>
+                        <p>Hours: 12:00PM - 1:00PM</p>
+                        <p>Days: Saturday</p>
+                        <p>Fees: $10.00 Registration Fee</p>
+                        <form action="freeregistration.html">
+                            <input type="button" value="Register" onClick="return registerOnLocation('Pottery', 45);" />
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            Copyright &copy; 2021 Community Center<br>
+        </footer>
+    </div>
 </body>
+
 </html>

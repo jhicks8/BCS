@@ -10,7 +10,7 @@
     function registerOnLocation(s, f){
         var currentSelection = s;
         if(f <= 0){
-            var confirmationText = "Are you sure you'd like to register for the On-Location Service: " + currentSelection
+            var confirmationText = "Are you sure you'd like to register for the Door Step Service: " + currentSelection
             + ". This is a free service so there is no additional charge.";
             if (confirm(confirmationText)) {
                 alert("Thank you for registering for: " + currentSelection);
@@ -18,7 +18,7 @@
                 alert("No worries, feel free to check out some other of our wonderful services.");
             }
         } else{
-            var confirmationText = "Are you sure you'd like to register for the On-Location Service: " + currentSelection
+            var confirmationText = "Are you sure you'd like to register for the Door Step Service: " + currentSelection
             + ". There is a charge of $" + f + ". Continue to checkout? ";
             if (confirm(confirmationText)) {
                 alert("Thank you for selecting: " + currentSelection + " Continuing the checkout.");
@@ -50,7 +50,7 @@
 <div id="wrapper">
 
 <main>
-	<h2>On Location Services</h2>
+	<h2>Door Step Services</h2>
 	<ul id="onlocationservices">
         <li class="FreeService">
             <div id="Spanish Lessons">
